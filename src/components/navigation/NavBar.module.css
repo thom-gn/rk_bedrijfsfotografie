@@ -1,0 +1,52 @@
+.nav {
+    font-family: "Montserrat", Sans-serif;
+    font-size:14px;
+    font-weight: 600;
+}
+
+.opaque {
+    color:#000000;
+    opacity: 0.8;
+    backdrop-filter: blur(12px);
+}
+
+.transparent {
+    background: transparent; /* Adjusted for module */
+    color: #e5e7eb;
+}
+
+.navigationContainer{
+    /**/
+}
+
+.a{
+    margin:0px 15px 0px 15px
+}
+
+.a {
+    position: relative; /* For positioning the pseudo-element */
+    margin: 0 15px;
+}
+
+.a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    height: 1px; /* Border thickness */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.a::after {
+    background:#f0f0f0;
+}
+
+.a::after {
+    background:#000000;
+}
+
+.a:hover::after {
+    transform: scaleX(1); /* Fully visible on hover */
+}

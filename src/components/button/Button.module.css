@@ -1,0 +1,68 @@
+.cameraButton {
+    position: relative; /* Necessary for absolute positioning of ::before */
+    padding: 5px 35px; /* Increase padding for better visibility */
+    background-color: transparent; /* Transparent background */
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden; /* Hide overflow for clipping effects */
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    z-index: 2; /* Ensure text is above ::before */
+}
+
+.cameraButton {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.cameraButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, background-color 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Below text */
+    mix-blend-mode: screen; /* Use screen mode for a more subtle effect */
+    opacity: 0; /* Start with opacity 0 */
+}
+
+.cameraButton:hover::before {
+    width: 200%; /* Expand to full size */
+    height: 200%; /* Expand to full size */
+    opacity: 1; /* Make the pseudo-element fully visible */
+}
+
+.transparent {
+    color: #FFFFFF; /* Initial text color */
+    border: 2px solid #FFFFFF; /* White border */
+}
+
+.opaque {
+    color: #000000; /* Initial text color */
+    border: 2px solid #000000; /* Black border */
+}
+
+.transparent::before {
+    background-color: #FFFFFF; /* Semi-transparent white */
+}
+
+.opaque::before {
+    background-color: #000000; /* Semi-transparent black */
+}
+
+/* Adjusted hover styles to change text color based on button class */
+.transparent:hover {
+    color: #000000; /* Change text color to black on hover for transparent button */
+    mix-blend-mode: unset; /* Ensure text color is not blended */
+
+}
+
+.opaque:hover {
+    color: #FFFFFF; /* Change text color to white on hover for opaque button */
+}

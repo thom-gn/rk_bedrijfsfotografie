@@ -1,0 +1,51 @@
+.photographyContainer {
+    justify-content:center;
+    align-items:center;
+    display:flex;
+}
+
+.column {
+    padding: 40px 30px 40px 30px;
+    min-height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex:1;
+}
+
+.border {
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
+    border-color: #000000;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 40px 30px 40px 30px;
+}
+.widgetWrap {
+    display: flex;             /* Use flexbox to manage children */
+    flex-direction: column;       /* Arrange children in a row */
+    height: 100%;              /* Set container height to match parent height */
+    width:100%;
+    align-items:center;
+}
+
+.rightManStyle {
+    font-family: "Rightman Signature", Sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.h2Style{
+    font-size: 36px;
+    line-height: 1.3em;
+}
+
+.pStyle {
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+
